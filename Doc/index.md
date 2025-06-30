@@ -1,4 +1,4 @@
 # Contents
 
-1. [**ConduitRunsHeight**](./Doc/ConduitRunsHeight.md) - Documentation for working with cable routing height
-2. [**Suspension**](./Doc/Suspension.md) - Suspension system documentation
+1. [**ConduitRunsHeight**](./ConduitRunsHeight.md) - Documentation for working with cable routing height
+2. [**Suspension**](./Suspension.md) - Suspension system documentation
