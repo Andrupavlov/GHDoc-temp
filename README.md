@@ -32,8 +32,7 @@ GHDoc-temp/
 
 ### Main Documentation
 
-- [**ConduitRunsHeight**](./Doc/ConduitRunsHeight.md) - Documentation for working with cable routing height
-- [**Suspension**](./Doc/Suspension.md) - Suspension system documentation
+[**Documentation**](./Doc/index.md)
 
 ### Reference Information
 
