@@ -1,64 +1,65 @@
 # GHDoc-temp
 
-Шаблон для документації проекту Grasshopper
+Template for Grasshopper project documentation
 
-## Опис проекту
+## Project Description
 
-Цей проект містить документацію та приклади для роботи з Rhinoceros Grasshopper з використанням IronPython 2.7.
+This project contains documentation and examples for working with Rhinoceros Grasshopper using IronPython 2.7.
 
-## Структура проекту
+## Project Structure
 
 ```
 GHDoc-temp/
-├── Doc/                    # Документація проекту
+├── Doc/                    # Project documentation
 │   ├── ConduitRunsHeight.md
 │   ├── Suspension.md
 │   └── ...
-├── Gh/                     # Файли Grasshopper
+├── Gh/                     # Grasshopper files
 │   ├── ConduitRunsHeight.gh
 │   ├── git_help.gh
 │   ├── Suspension.gh
 │   └── ...
-├── Help/                   # Довідкова інформація
+├── Help/                   # Reference information
 │   ├── Markdown.md
 │   └── ...
-├── Py/                     # Python скрипти
+├── Py/                     # Python scripts
 │   ├── git_help.py
 │   └── ...
 └── README.md              # README
 ```
 
-## Документація
+## Documentation
 
-### Основна документація
+### Main Documentation
 
-- [**ConduitRunsHeight**](./Doc/ConduitRunsHeight.md) - Документація з роботи з висотою прокладки кабелів
-- [**Suspension**](./Doc/Suspension.md) - Документація з системи підвіски
+- [**ConduitRunsHeight**](./Doc/ConduitRunsHeight.md) - Documentation for working with cable routing height
+- [**Suspension**](./Doc/Suspension.md) - Suspension system documentation
 
-### Довідкова інформація
+### Reference Information
 
-- [**Markdown Guide**](./Help/Markdown.md) - Посібник з використання Markdown
+- [**Markdown Guide**](./Help/Markdown.md) - Markdown usage guide
+- [**Mermaid Guide**](./Help/Mermaid.md) - Mermaid usage guide
 
-## Швидкий старт
+## Quick Start
 
-1. Збережіть `.gh` файл у директорії `./Gh` (без використання в імені "_001", "v0.001" тощо)
-2. Імпортуйте вміст з файлу `./Gh/git_help.gh` 
-3. Імпортований скрипт має такі параметри:
+1. Save the `.gh` file in the `./Gh` directory (without using "_001", "v0.001", etc. in the name)
+2. Import content from the `./Gh/git_help.gh` file
+3. The imported script has the following parameters:
     
     **Inputs:**
     
-    - `OPEN_MAIN_BRANCH`: Boolean - відкриває основну гілку репозиторію на GitHub
-    - `OPEN_HELP_IN_GITHUB`: Boolean - відкриває документацію поточного файлу на GitHub
-    - `OPEN_LOCAL_HELP`: Boolean - відкриває локальний .md файл документації в редакторі
+    - `OPEN_MAIN_BRANCH`: Boolean - opens the main repository branch on GitHub
+    - `OPEN_HELP_IN_GITHUB`: Boolean - opens the current file's documentation on GitHub
+    - `OPEN_LOCAL_HELP`: Boolean - opens the local .md documentation file in the editor
     
     **Output:**
     
-    - `md`: String - вміст локального .md файлу документації
+    - `md`: String - content of the local .md documentation file
 
 > [!important] 
-> `OPEN_HELP_IN_GITHUB` відкриває документацію на поточній активній гілці репозиторію, а `OPEN_MAIN_BRANCH` завжди відкриває документацію на основній гілці `main`. Це дозволяє переглядати як поточну версію документації, так і стабільну версію з основної гілки.
+> `OPEN_HELP_IN_GITHUB` opens documentation on the current active repository branch, while `OPEN_MAIN_BRANCH` always opens documentation on the main `main` branch. This allows you to view both the current version of documentation and the stable version from the main branch.
 
-1. Якщо натиснути `OPEN_HELP_IN_GITHUB` або `OPEN_LOCAL_HELP` і при цьому у директорії `./Doc` файлу з таким іменем не буде, то він буде створений автоматично
+1. If you press `OPEN_HELP_IN_GITHUB` or `OPEN_LOCAL_HELP` and there is no file with such a name in the `./Doc` directory, it will be created automatically
 
 > [!important] 
-> Ім'я Grasshopper файлу та Markdown файлу повинні збігатися!
+> The Grasshopper file name and Markdown file name must match!
