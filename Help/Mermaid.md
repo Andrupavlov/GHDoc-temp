@@ -11,87 +11,87 @@
 
 ```
 graph TD
-    A[Початок] --> B{Чи є кава?}
-    B -->|Так| C[Пити каву]
-    B -->|Ні| D[Купити каву]
-    C --> E[Кінець]
+    A[Start] --> B{Is there coffee?}
+    B -->|Yes| C[Drink coffee]
+    B -->|No| D[Buy coffee]
+    C --> E[End]
     D --> C
 ```
 
 ```mermaid
 graph TD
-    A[Початок] --> B{Чи є кава?}
-    B -->|Так| C[Пити каву]
-    B -->|Ні| D[Купити каву]
-    C --> E[Кінець]
+    A[Start] --> B{Is there coffee?}
+    B -->|Yes| C[Drink coffee]
+    B -->|No| D[Buy coffee]
+    C --> E[End]
     D --> C
 ```
 
-## 2. Діаграма послідовності:
+## 2. Sequence diagram:
 
 ```
 sequenceDiagram
-    participant Користувач
-    participant Сервер
-    participant БазаДаних
-    Користувач->>Сервер: Запит даних
-    Сервер->>БазаДаних: Запит до БД
-    БазаДаних->>Сервер: Відповідь з даними
-    Сервер->>Користувач: Відображення даних
+    participant User
+    participant Server
+    participant Database
+    User->>Server: Data request
+    Server->>Database: Database query
+    Database->>Server: Data response
+    Server->>User: Display data
 ```
 
 ```mermaid
 sequenceDiagram
-    participant Користувач
-    participant Сервер
-    participant БазаДаних
-    Користувач->>Сервер: Запит даних
-    Сервер->>БазаДаних: Запит до БД
-    БазаДаних->>Сервер: Відповідь з даними
-    Сервер->>Користувач: Відображення даних
+    participant User
+    participant Server
+    participant Database
+    User->>Server: Data request
+    Server->>Database: Database query
+    Database->>Server: Data response
+    Server->>User: Display data
 ```
 
-## 3. Діаграма класів:
+## 3. Class diagram:
 
 ```
 classDiagram
-    class Тварина {
-        +ім'я: рядок
-        +вік: ціле число
-        +їсти()
-        +спати()
+    class Animal {
+        +name: string
+        +age: integer
+        +eat()
+        +sleep()
     }
-    class Собака {
-        +порода: рядок
-        +гавкати()
+    class Dog {
+        +breed: string
+        +bark()
     }
-    class Кіт {
-        +муркотіти()
+    class Cat {
+        +purr()
     }
-    Тварина <|-- Собака
-    Тварина <|-- Кіт
+    Animal <|-- Dog
+    Animal <|-- Cat
 ```
 
 ```mermaid
 classDiagram
-    class Тварина {
-        +ім'я: рядок
-        +вік: ціле число
-        +їсти()
-        +спати()
+    class Animal {
+        +name: string
+        +age: integer
+        +eat()
+        +sleep()
     }
-    class Собака {
-        +порода: рядок
-        +гавкати()
+    class Dog {
+        +breed: string
+        +bark()
     }
-    class Кіт {
-        +муркотіти()
+    class Cat {
+        +purr()
     }
-    Тварина <|-- Собака
-    Тварина <|-- Кіт
+    Animal <|-- Dog
+    Animal <|-- Cat
 ```
 
-## 4. Діаграма Git Flow:
+## 4. Git Flow diagram:
 
 ```
 gitGraph
@@ -121,78 +121,78 @@ gitGraph
     commit
 ```
 
-## 5. Кругова діаграма:
+## 5. Pie chart:
 
 ```
-pie title Улюблені фрукти
-    "Яблука" : 120
-    "Банани" : 80
-    "Апельсини" : 70
-    "Ківі" : 50
+pie title Favorite fruits
+    "Apples" : 120
+    "Bananas" : 80
+    "Oranges" : 70
+    "Kiwi" : 50
 ```
 
 ```mermaid
-pie title Улюблені фрукти
-    "Яблука" : 120
-    "Банани" : 80
-    "Апельсини" : 70
-    "Ківі" : 50
+pie title Favorite fruits
+    "Apples" : 120
+    "Bananas" : 80
+    "Oranges" : 70
+    "Kiwi" : 50
 ```
 
-## 6. Діаграма стану:
+## 6. State diagram:
 
 ```
 stateDiagram-v2
-    [*] --> Ще
-    Ще --> Готовність: Якщо готовий
-    Готовність --> Виконання
-    Виконання --> [*]
+    [*] --> NotReady
+    NotReady --> Ready: If ready
+    Ready --> Running
+    Running --> [*]
 ```
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Ще
-    Ще --> Готовність: Якщо готовий
-    Готовність --> Виконання
-    Виконання --> [*]
+    [*] --> NotReady
+    NotReady --> Ready: If ready
+    Ready --> Running
+    Running --> [*]
 ```
 
-## 7. Діаграма подорожі користувача:
+## 7. User journey diagram:
 
 ```
 journey
-    title Досвід користувача при купівлі онлайн
-    section Пошук товару
-      Перегляд каталогу: 5: Покупець
-      Використання фільтрів: 4: Покупець
-      Знаходження потрібного товару: 5: Покупець
-    section Оформлення замовлення
-      Додавання в кошик: 5: Покупець
-      Заповнення форми: 3: Покупець
-      Вибір способу доставки: 4: Покупець
-    section Оплата
-      Вибір способу оплати: 4: Покупець
-      Підтвердження замовлення: 5: Покупець, Система
+    title User experience when shopping online
+    section Product Search
+      Browse catalog: 5: Customer
+      Use filters: 4: Customer
+      Find desired product: 5: Customer
+    section Order Processing
+      Add to cart: 5: Customer
+      Fill out form: 3: Customer
+      Choose delivery method: 4: Customer
+    section Payment
+      Choose payment method: 4: Customer
+      Confirm order: 5: Customer, System
 ```
 
 ```mermaid
 journey
-    title Досвід користувача при купівлі онлайн
-    section Пошук товару
-      Перегляд каталогу: 5: Покупець
-      Використання фільтрів: 4: Покупець
-      Знаходження потрібного товару: 5: Покупець
-    section Оформлення замовлення
-      Додавання в кошик: 5: Покупець
-      Заповнення форми: 3: Покупець
-      Вибір способу доставки: 4: Покупець
-    section Оплата
-      Вибір способу оплати: 4: Покупець
-      Підтвердження замовлення: 5: Покупець, Система
+    title User experience when shopping online
+    section Product Search
+      Browse catalog: 5: Customer
+      Use filters: 4: Customer
+      Find desired product: 5: Customer
+    section Order Processing
+      Add to cart: 5: Customer
+      Fill out form: 3: Customer
+      Choose delivery method: 4: Customer
+    section Payment
+      Choose payment method: 4: Customer
+      Confirm order: 5: Customer, System
 ```
 
 
-## 8. ХУ діаграма
+## 8. XY chart
 
 ```
 xychart-beta
