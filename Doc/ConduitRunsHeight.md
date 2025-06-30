@@ -1,7 +1,5 @@
 # Structure and Clustering Logic
 
-![](Pic/ViewCapture20250627_100953.jpg)
-
 ## System Overview
 
 This system is designed for analyzing and clustering three-dimensional objects (boxes):
